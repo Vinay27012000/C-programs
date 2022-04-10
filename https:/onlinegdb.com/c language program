@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+char counter(char str[],int);
+char str[50],count;
+int i,len;
+
+printf("\n enter string : ");
+gets(str);
+len=strlen(str);
+count=counter(str,len);
+printf("\n %d character ",count);
+return 0;
+}
+
+char counter(char x[],int size){
+int c=0,i;
+for(i=0;i<size;i++){
+if(x[i]>='a'&&x[i]<='z')
+c++;
+}
+return (c);
+}
