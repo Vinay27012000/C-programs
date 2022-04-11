@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{int count(int*);
+int c;
+count(&c);
+printf("%d",c);
+
+    return 0;
+}
+
+int count(int *p){
+    char str[100];
+    int len,i,c=0;
+    
+    gets(str);
+    for(len=0;str[len]!='\0';len++);
+    
+    for(i=0;i<len;i++){
+        if(str[i]>='a'&&str[i]<='z')
+        c++;
+    }
+    *p=c;
+    return (*p);
+}
+
