@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+   char str[20],str2[10];
+   int i,j,len,len2;
+   gets(str);
+   gets(str2);
+   len=strlen(str);
+   len2=strlen(str2);
+   for(i=len+1,j=0;j<len2;j++,i++)
+   str[i]=str2[j];
+   for(i=0;i<=len+len2;i++)
+   printf("%c",str[i]);
+    return 0;
+}
+
