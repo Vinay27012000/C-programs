@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+   void sorting(int *,int);
+   int i,str[10];
+   
+   for(i=0;i<10;i++)
+   scanf("%d",&str[i]);
+    sorting(str,10);
+
+   printf("\narray in accending order \n");
+for(i=0;i<10;i++)
+printf("%d ",str[i]);
+ printf("\narray in decending order \n");
+for(i=9;i>=0;i--)
+printf("%d ",str[i]);
+    return 0;
+}
+void sorting(int *p,int size)
+{
+    int i,j,tmp;
+    for(j=1;j<size;j++)
+    {
+       for(i=0;i<size;i++)
+       {
+         if(*(p+i)>*(p+j))
+         {   tmp=*(p+i);
+            *(p+i)=*(p+j);
+            *(p+j)=tmp;
+         }
+       }
+    }
+}
