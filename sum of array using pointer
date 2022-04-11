@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+ void cal(int *,int);
+ int str[5],i;
+ for(i=0;i<5;i++)
+ scanf("%d",&str[i]);
+ cal(str,5);
+ 
+
+    return 0;
+}
+void cal(int *p,int size){
+ int sum=0,mul=1;
+ float avg=0;
+ for(int i=0;i<size;i++)
+ {sum=sum+*(p+i);
+ mul=mul**(p+i);
+ }
+ avg=sum/size;
+ printf("\nsum is %d",sum);
+  printf("\naverage is %.2f",avg);
+  printf("\n multplication is %d",mul);
+}
+
