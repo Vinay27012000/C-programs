@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+ int x,y,*p;
+ scanf("%d",&x);
+ p=&x;
+y=*p;
+ printf("\n%d",y);
+
+    return 0;
+}
+
